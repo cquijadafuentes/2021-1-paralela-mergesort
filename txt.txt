@@ -1,0 +1,13 @@
+./mergesort 1000000
+./mergesort4bloques 1000000
+./parallel_mergesort 1000000
+./parallel_mergesort4bloques 1000000
+./mergesort 5000000
+./mergesort4bloques 5000000
+./parallel_mergesort 5000000
+./parallel_mergesort4bloques 5000000
+./mergesort 10000000
+./mergesort4bloques 10000000
+./parallel_mergesort 10000000
+./parallel_mergesort4bloques 10000000
+

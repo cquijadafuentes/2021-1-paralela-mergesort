@@ -1,0 +1,25 @@
+set title 'Algoritmos Mergesort Paralelo'
+reset
+
+set terminal png size 800,600
+set grid
+set key out horiz
+
+set xrange [5:105]
+set xtics 10
+set xlabel "N*10^6" font ",18"
+set yrange [1000:40000]
+set ylabel "Tiempo [ms]" font ",18"
+
+set key font ",16"
+set tics font ",14"
+
+set style line 1 linecolor rgb "blue" dashtype 8 linewidth 1.5 pointtype 4 pointsize 1.5
+set style line 2 linecolor rgb "red" dashtype 8 linewidth 1.5 pointtype 4 pointsize 1.5
+set style line 3 linecolor rgb "green" dashtype 8 linewidth 1.5 pointtype 4 pointsize 1.5
+set style line 4 linecolor rgb "dark-violet" dashtype 8 linewidth 1.5 pointtype 4 pointsize 1.5
+set style line 5 linecolor rgb "gray0" dashtype 8 linewidth 1.5 pointtype 4 pointsize 1.5
+set style line 6 linecolor rgb "dark-chartreuse" dashtype 8 linewidth 1.5 pointtype 4 pointsize 1.5
+
+set output 'graf_merge.png'
+plot '_data_mergesort.txt' u 1:2 w lp t 'tradicional' ls 1, '' u 1:4 w lp t '4\_bloques' ls 2, '' u 1:6 w lp t 'paralelo\_tradicional' ls 3, '' u 1:8 w lp t 'paralelo\_4\_bloques' ls 4
